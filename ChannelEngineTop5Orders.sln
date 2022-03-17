@@ -1,6 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineTop5Orders.Core.Core", "src\ChannelEngineTop5Orders.Core\ChannelEngineTop5Orders.Core.Core.csproj", "{8515E50E-1B8C-471A-896C-5A5FE9D0A69E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineTop5Orders.Core", "src\ChannelEngineTop5Orders.Core\ChannelEngineTop5Orders.Core.csproj", "{8515E50E-1B8C-471A-896C-5A5FE9D0A69E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{758A06C6-B7AD-473B-8F75-D66E17B00CF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{330D60BB-E325-45BB-8F35-119078AC3072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineTop5Orders.Application", "src\ChannelEngineTop5Orders.Application\ChannelEngineTop5Orders.Application.csproj", "{2732C589-64B6-4DE8-8D72-B1E7F68D7964}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +18,13 @@ Global
 		{8515E50E-1B8C-471A-896C-5A5FE9D0A69E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8515E50E-1B8C-471A-896C-5A5FE9D0A69E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8515E50E-1B8C-471A-896C-5A5FE9D0A69E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2732C589-64B6-4DE8-8D72-B1E7F68D7964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2732C589-64B6-4DE8-8D72-B1E7F68D7964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2732C589-64B6-4DE8-8D72-B1E7F68D7964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2732C589-64B6-4DE8-8D72-B1E7F68D7964}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8515E50E-1B8C-471A-896C-5A5FE9D0A69E} = {758A06C6-B7AD-473B-8F75-D66E17B00CF8}
+		{2732C589-64B6-4DE8-8D72-B1E7F68D7964} = {758A06C6-B7AD-473B-8F75-D66E17B00CF8}
 	EndGlobalSection
 EndGlobal
