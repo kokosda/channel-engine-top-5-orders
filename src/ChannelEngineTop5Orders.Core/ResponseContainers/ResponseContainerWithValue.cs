@@ -1,6 +1,6 @@
-﻿using ChannelEngineTop5Orders.Core.Core.Interfaces;
+﻿using ChannelEngineTop5Orders.Core.Interfaces;
 
-namespace ChannelEngineTop5Orders.Core.Core.ResponseContainers
+namespace ChannelEngineTop5Orders.Core.ResponseContainers
 {
 	public sealed class ResponseContainerWithValue<T> : ResponseContainer, IResponseContainerWithValue<T>
 	{

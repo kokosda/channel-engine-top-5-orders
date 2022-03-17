@@ -1,8 +1,8 @@
-﻿using ChannelEngineTop5Orders.Core.Core.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using ChannelEngineTop5Orders.Core.Interfaces;
 
-namespace ChannelEngineTop5Orders.Core.Core.ResponseContainers
+namespace ChannelEngineTop5Orders.Core.ResponseContainers
 {
 	public class ResponseContainer : IResponseContainer
 	{

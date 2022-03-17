@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace ChannelEngineTop5Orders.Core.Core.Interfaces
+namespace ChannelEngineTop5Orders.Core.Interfaces
 {
 	public interface ICommonSpecification<in T>
 	{

@@ -1,6 +1,6 @@
-﻿using ChannelEngineTop5Orders.Core.Core.Domain;
+﻿using ChannelEngineTop5Orders.Core.Domain;
 
-namespace ChannelEngineTop5Orders.Core.Core.Interfaces
+namespace ChannelEngineTop5Orders.Core.Interfaces
 {
 	public interface ISpecification<in T, TId> where T : EntityBase<TId>
 	{

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ChannelEngineTop5Orders.Core.Core.Interfaces
+namespace ChannelEngineTop5Orders.Core.Interfaces
 {
 	public interface ILog
 	{

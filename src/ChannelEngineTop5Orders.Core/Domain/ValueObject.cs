@@ -1,4 +1,4 @@
-﻿namespace ChannelEngineTop5Orders.Core.Core.Domain
+﻿namespace ChannelEngineTop5Orders.Core.Domain
 {
 	public abstract record ValueObject
 	{
