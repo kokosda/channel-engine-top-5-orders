@@ -9,6 +9,7 @@
     <ItemGroup>
       <ProjectReference Include="..\ChannelEngineTopSellingProducts.Application\ChannelEngineTopSellingProducts.Application.csproj" />
       <ProjectReference Include="..\ChannelEngineTopSellingProducts.Core\ChannelEngineTopSellingProducts.Core.csproj" />
+      <ProjectReference Include="..\ChannelEngineTopSellingProducts.Infrastructure\ChannelEngineTopSellingProducts.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

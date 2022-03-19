@@ -1,9 +1,14 @@
 using ChannelEngineTopSellingProducts.Application.DependencyInjection;
+using ChannelEngineTopSellingProducts.Infrastructure.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddInfrastructureLevelServices(builder.Configuration);
 builder.Services.AddApplicationLevelServices();
 
 var app = builder.Build();
