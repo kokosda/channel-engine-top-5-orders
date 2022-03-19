@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "ChannelEngineTop5Orders.Web": {
+    "ChannelEngineTopSellingOrders.Web": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
