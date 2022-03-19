@@ -11,15 +11,15 @@ public sealed class ProductsInMemoryRepository : IProductsRepository
 		_inMemoryDatabase = inMemoryDatabase ?? throw new ArgumentNullException(nameof(inMemoryDatabase));
 	}
 
-	public Task<IReadOnlyCollection<TopSellingProduct>?> GetTopSellingByAmount(int amount)
+	public Task<IReadOnlyCollection<TopSellingProduct>?> GetTopSellingByQuantity(int quantity)
 	{
-		var result = _inMemoryDatabase.GetPersistedObject<IReadOnlyCollection<TopSellingProduct>>($"TopSellingProducts_{amount}");
+		var result = _inMemoryDatabase.GetPersistedObject<IReadOnlyCollection<TopSellingProduct>>($"TopSellingProducts_{quantity}");
 		return Task.FromResult(result);
 	}
 
-	public Task SaveTopSellingByAmount(IReadOnlyCollection<TopSellingProduct> topSellingProducts)
+	public Task SaveTopSellingProducts(IReadOnlyCollection<TopSellingProduct> topSellingProducts, int expectedMaxQuantity)
 	{
-		_inMemoryDatabase.PersistObject(topSellingProducts, $"TopSellingProducts_{topSellingProducts.Count}");
+		_inMemoryDatabase.PersistObject(topSellingProducts, $"TopSellingProducts_{expectedMaxQuantity}");
 		return Task.CompletedTask;
 	}
 }

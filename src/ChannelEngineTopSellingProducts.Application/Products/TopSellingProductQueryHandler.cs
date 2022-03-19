@@ -20,7 +20,7 @@ public class TopSellingProductQueryHandler : IGenericQueryHandler<TopSellingProd
 	public async Task<IResponseContainerWithValue<TopSellingProductsDto>> HandleAsync(TopSellingProductsQuery query)
 	{
 		var result = new ResponseContainerWithValue<TopSellingProductsDto>();
-		var topSellingProductsList = await _productsRepository.GetTopSellingByAmount(query.AmountOfTopProducts) ?? Array.Empty<TopSellingProduct>();
+		var topSellingProductsList = await _productsRepository.GetTopSellingByQuantity(query.AmountOfTopProducts) ?? Array.Empty<TopSellingProduct>();
 		var topSellingProducts = new TopSellingProductsDto
 		{
 			TopSellingProducts = topSellingProductsList.Select(tsp => tsp.ToTopSellingProductDto()).ToArray()

@@ -3,9 +3,9 @@
 public interface IProductsRepository
 {
 	/// <summary>
-	/// Returns a list of the top <param name="amount" /> products sold.
+	/// Returns a list of the top <param name="quantity" /> products sold.
 	/// </summary>
-	Task<IReadOnlyCollection<TopSellingProduct>?> GetTopSellingByAmount(int amount);
+	Task<IReadOnlyCollection<TopSellingProduct>?> GetTopSellingByQuantity(int quantity);
 
-	Task SaveTopSellingByAmount(IReadOnlyCollection<TopSellingProduct> topSellingProducts);
+	Task SaveTopSellingProducts(IReadOnlyCollection<TopSellingProduct> topSellingProducts, int expectedMaxQuantity);
 }
