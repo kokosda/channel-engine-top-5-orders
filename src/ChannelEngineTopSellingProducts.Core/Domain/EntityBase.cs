@@ -1,4 +1,4 @@
-﻿namespace ChannelEngineTop5Orders.Core.Domain
+﻿namespace ChannelEngineTopSellingProducts.Core.Domain
 {
 	public abstract class EntityBase<TId> where TId: new()
 	{

@@ -1,4 +1,4 @@
-﻿namespace ChannelEngineTop5Orders.Core.Interfaces
+﻿namespace ChannelEngineTopSellingProducts.Core.Interfaces
 {
 	public interface IResponseContainer
 	{

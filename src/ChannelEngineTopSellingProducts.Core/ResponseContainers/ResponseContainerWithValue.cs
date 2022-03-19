@@ -1,6 +1,6 @@
-﻿using ChannelEngineTop5Orders.Core.Interfaces;
+﻿using ChannelEngineTopSellingProducts.Core.Interfaces;
 
-namespace ChannelEngineTop5Orders.Core.ResponseContainers
+namespace ChannelEngineTopSellingProducts.Core.ResponseContainers
 {
 	public sealed class ResponseContainerWithValue<T> : ResponseContainer, IResponseContainerWithValue<T> where T: new()
 	{

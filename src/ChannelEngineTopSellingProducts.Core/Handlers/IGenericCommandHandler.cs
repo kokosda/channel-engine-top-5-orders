@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using ChannelEngineTop5Orders.Core.Interfaces;
+using ChannelEngineTopSellingProducts.Core.Interfaces;
 
-namespace ChannelEngineTop5Orders.Core.Handlers
+namespace ChannelEngineTopSellingProducts.Core.Handlers
 {
 	public interface IGenericCommandHandler<in TCommand, TResult>
 	{

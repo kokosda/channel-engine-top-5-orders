@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace ChannelEngineTop5Orders.Core.Interfaces
+namespace ChannelEngineTopSellingProducts.Core.Interfaces
 {
 	public interface ISqlConnectionFactory
 	{
