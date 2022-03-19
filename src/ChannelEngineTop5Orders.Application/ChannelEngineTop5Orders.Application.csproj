@@ -2,6 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
@@ -10,6 +11,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\ChannelEngineTop5Orders.Core\ChannelEngineTop5Orders.Core.csproj" />
+        <ProjectReference Include="..\ChannelEngineTop5Orders.Domain\ChannelEngineTop5Orders.Domain.csproj" />
     </ItemGroup>
 
 </Project>
