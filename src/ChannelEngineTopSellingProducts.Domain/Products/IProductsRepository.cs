@@ -1,4 +1,4 @@
-﻿namespace ChannelEngineTop5Orders.Domain.Products;
+﻿namespace ChannelEngineTopSellingProducts.Domain.Products;
 
 public interface IProductsRepository
 {

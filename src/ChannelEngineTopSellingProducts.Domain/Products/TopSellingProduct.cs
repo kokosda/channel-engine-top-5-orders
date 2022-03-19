@@ -1,6 +1,6 @@
-﻿using ChannelEngineTop5Orders.Core.Domain;
+﻿using ChannelEngineTopSellingProducts.Core.Domain;
 
-namespace ChannelEngineTop5Orders.Domain.Products;
+namespace ChannelEngineTopSellingProducts.Domain.Products;
 
 public sealed class TopSellingProduct : EntityBase<int>
 {
