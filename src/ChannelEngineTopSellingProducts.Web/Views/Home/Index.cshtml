@@ -8,6 +8,7 @@
 	<table class="table">
 		<thead>
 		<tr>
+			<th>ID</th>
 			<th>Name</th>
 			<th>GTIN</th>
 			<th>Total Quantity</th>
@@ -17,6 +18,7 @@
 		@foreach (var item in Model.TopSellingProducts)
 		{
 			<tr>
+				<td>@item.Id</td>
 				<td>@item.Name</td>
 				<td>@item.Gtin</td>
 				<td>@item.TotalQuantity</td>
