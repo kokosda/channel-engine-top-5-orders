@@ -30,7 +30,7 @@ public sealed class TopSellingProductsRoutine : IStartUpRoutine
 			.Select(item => new TopSellingProduct
 			{
 				Id = item.ChannelProductNo,
-				Name = item.Name,
+				Name = item.Description,
 				Gtin = item.Gtin,
 				MerchantProductNo = item.MerchantProductNo,
 				TotalQuantity = item.Quantity

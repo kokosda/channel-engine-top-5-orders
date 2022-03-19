@@ -26,7 +26,7 @@ public sealed class ChannelEngineRestApiClient : IChannelEngineApiClient
 		if (status == null)
 			throw new ArgumentNullException(nameof(status));
 
-		var requestUri = $"apikey={_apiKey}&statuses={status}";
+		var requestUri = $"orders/?apikey={_apiKey}&statuses={status}";
 		var orderResponse = await _httpClient.GetFromJsonAsync<OrderResponseModel>(requestUri);
 
 		if (orderResponse is null)

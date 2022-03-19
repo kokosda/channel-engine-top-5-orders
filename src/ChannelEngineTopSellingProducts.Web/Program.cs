@@ -1,5 +1,6 @@
 using ChannelEngineTopSellingProducts.Application.DependencyInjection;
 using ChannelEngineTopSellingProducts.Infrastructure.DependencyInjection;
+using ChannelEngineTopSellingProducts.Web.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,8 @@ builder.Services.AddInfrastructureLevelServices(builder.Configuration);
 builder.Services.AddApplicationLevelServices();
 
 var app = builder.Build();
+
+app.UseStartUpRoutine();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

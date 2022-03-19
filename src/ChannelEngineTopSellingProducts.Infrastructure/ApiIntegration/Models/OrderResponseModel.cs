@@ -2,5 +2,5 @@
 
 public sealed class OrderResponseModel
 {
-	public OrderModel[] Content { get; set; }
+	public OrderModel[] Content { get; init; } = Array.Empty<OrderModel>();
 }
