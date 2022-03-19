@@ -2,9 +2,9 @@
 
 namespace ChannelEngineTop5Orders.Core.ResponseContainers
 {
-	public sealed class ResponseContainerWithValue<T> : ResponseContainer, IResponseContainerWithValue<T>
+	public sealed class ResponseContainerWithValue<T> : ResponseContainer, IResponseContainerWithValue<T> where T: new()
 	{
-		public T Value { get; private set; }
+		public T Value { get; private set; } = new();
 
 		public void SetSuccessValue(T value)
 		{
