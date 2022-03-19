@@ -1,8 +1,27 @@
-﻿@{
+﻿@model TopSellingProductsViewModel
+@{
 	ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-	<h1 class="display-4">Welcome</h1>
-	<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+	<h1>Top Selling Products</h1>
+	<table>
+		<thead>
+		<tr>
+			<th>Name</th>
+			<th>GTIN</th>
+			<th>Total Quantity</th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (var item in Model.TopSellingProducts)
+		{
+			<tr>
+				<td>@item.Name</td>
+				<td>@item.Gtin</td>
+				<td>@item.TotalQuantity</td>
+			</tr>
+		}
+		</tbody>
+	</table>
 </div>

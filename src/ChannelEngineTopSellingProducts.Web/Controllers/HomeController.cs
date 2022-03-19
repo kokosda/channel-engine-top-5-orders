@@ -1,21 +1,31 @@
 ﻿using System.Diagnostics;
+using ChannelEngineTopSellingProducts.Application.Products;
+using ChannelEngineTopSellingProducts.Core.Handlers;
 using Microsoft.AspNetCore.Mvc;
 using ChannelEngineTopSellingProducts.Web.Models;
+using ChannelEngineTopSellingProducts.Web.Models.Extensions;
 
 namespace ChannelEngineTopSellingProducts.Web.Controllers;
 
 public class HomeController : Controller
 {
-	private readonly ILogger<HomeController> _logger;
+	private readonly IGenericQueryHandler<TopSellingProductsQuery, TopSellingProductsDto> _topSellingProductsQueryHandler;
 
-	public HomeController(ILogger<HomeController> logger)
+	public HomeController(IGenericQueryHandler<TopSellingProductsQuery, TopSellingProductsDto> topSellingProductsQueryHandler)
 	{
-		_logger = logger;
+		_topSellingProductsQueryHandler = topSellingProductsQueryHandler ?? throw new ArgumentNullException(nameof(topSellingProductsQueryHandler));
 	}
 
-	public IActionResult Index()
+	public async Task<IActionResult> Index()
 	{
-		return View();
+		var query = new TopSellingProductsQuery { AmountOfTopProducts = 5 };
+		var responseContainer = await _topSellingProductsQueryHandler.HandleAsync(query);
+
+		if (!responseContainer.IsSuccess)
+			return Error(responseContainer.Messages);
+
+		var viewModel = responseContainer.Value.ToViewModel();
+		return View(viewModel);
 	}
 
 	public IActionResult Privacy()
@@ -24,8 +34,19 @@ public class HomeController : Controller
 	}
 
 	[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-	public IActionResult Error()
+	public IActionResult Error(string? message = null)
 	{
-		return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
+		var errorViewModel = GetErrorViewModel(message);
+		return View("Error", errorViewModel);
+	}
+
+	private ErrorViewModel GetErrorViewModel(string? message)
+	{
+		var result = new ErrorViewModel
+		{
+			RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier,
+			Message = message ?? string.Empty
+		};
+		return result;
 	}
 }
