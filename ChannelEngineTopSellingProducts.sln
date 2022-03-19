@@ -1,16 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineTop5Orders.Core", "src\ChannelEngineTop5Orders.Core\ChannelEngineTop5Orders.Core.csproj", "{8515E50E-1B8C-471A-896C-5A5FE9D0A69E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineTopSellingProducts.Core", "src\ChannelEngineTopSellingProducts.Core\ChannelEngineTopSellingProducts.Core.csproj", "{8515E50E-1B8C-471A-896C-5A5FE9D0A69E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{758A06C6-B7AD-473B-8F75-D66E17B00CF8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{330D60BB-E325-45BB-8F35-119078AC3072}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineTop5Orders.Application", "src\ChannelEngineTop5Orders.Application\ChannelEngineTop5Orders.Application.csproj", "{2732C589-64B6-4DE8-8D72-B1E7F68D7964}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineTopSellingProducts.Application", "src\ChannelEngineTopSellingProducts.Application\ChannelEngineTopSellingProducts.Application.csproj", "{2732C589-64B6-4DE8-8D72-B1E7F68D7964}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineTop5Orders.Web", "src\ChannelEngineTop5Orders.Web\ChannelEngineTop5Orders.Web.csproj", "{537D89B8-BA04-467B-AD7E-057A55B7DB9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineTopSellingProducts.Web", "src\ChannelEngineTopSellingProducts.Web\ChannelEngineTopSellingProducts.Web.csproj", "{537D89B8-BA04-467B-AD7E-057A55B7DB9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineTop5Orders.Domain", "src\ChannelEngineTop5Orders.Domain\ChannelEngineTop5Orders.Domain.csproj", "{600AA602-D020-4E91-ACF1-5C2241C95A3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineTopSellingProducts.Domain", "src\ChannelEngineTopSellingProducts.Domain\ChannelEngineTopSellingProducts.Domain.csproj", "{600AA602-D020-4E91-ACF1-5C2241C95A3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
