@@ -1,7 +1,10 @@
+using ChannelEngineTop5Orders.Application.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddApplicationLevelServices();
 
 var app = builder.Build();
 
