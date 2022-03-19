@@ -10,15 +10,17 @@ namespace ChannelEngineTopSellingProducts.Web.Controllers;
 public class HomeController : Controller
 {
 	private readonly IGenericQueryHandler<TopSellingProductsQuery, TopSellingProductsDto> _topSellingProductsQueryHandler;
+	private readonly IConfiguration _configuration;
 
-	public HomeController(IGenericQueryHandler<TopSellingProductsQuery, TopSellingProductsDto> topSellingProductsQueryHandler)
+	public HomeController(IGenericQueryHandler<TopSellingProductsQuery, TopSellingProductsDto> topSellingProductsQueryHandler, IConfiguration configuration)
 	{
 		_topSellingProductsQueryHandler = topSellingProductsQueryHandler ?? throw new ArgumentNullException(nameof(topSellingProductsQueryHandler));
+		_configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
 	}
 
 	public async Task<IActionResult> Index()
 	{
-		var query = new TopSellingProductsQuery { AmountOfTopProducts = 5 };
+		var query = new TopSellingProductsQuery { AmountOfTopProducts = int.Parse(_configuration["TopSellingProductCount"]) };
 		var responseContainer = await _topSellingProductsQueryHandler.HandleAsync(query);
 
 		if (!responseContainer.IsSuccess)
