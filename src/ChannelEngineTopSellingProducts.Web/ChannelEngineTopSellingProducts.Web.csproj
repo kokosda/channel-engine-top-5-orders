@@ -7,8 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ChannelEngineTop5Orders.Application\ChannelEngineTop5Orders.Application.csproj" />
-      <ProjectReference Include="..\ChannelEngineTop5Orders.Core\ChannelEngineTop5Orders.Core.csproj" />
+      <ProjectReference Include="..\ChannelEngineTopSellingProducts.Application\ChannelEngineTopSellingProducts.Application.csproj" />
+      <ProjectReference Include="..\ChannelEngineTopSellingProducts.Core\ChannelEngineTopSellingProducts.Core.csproj" />
     </ItemGroup>
 
 </Project>

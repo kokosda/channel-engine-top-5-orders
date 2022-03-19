@@ -1,4 +1,4 @@
-using ChannelEngineTop5Orders.Application.DependencyInjection;
+using ChannelEngineTopSellingProducts.Application.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using ChannelEngineTop5Orders.Web.Models;
+using ChannelEngineTopSellingProducts.Web.Models;
 
-namespace ChannelEngineTop5Orders.Web.Controllers;
+namespace ChannelEngineTopSellingProducts.Web.Controllers;
 
 public class HomeController : Controller
 {

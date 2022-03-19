@@ -1,4 +1,4 @@
-namespace ChannelEngineTop5Orders.Web.Models;
+namespace ChannelEngineTopSellingProducts.Web.Models;
 
 public class ErrorViewModel
 {
