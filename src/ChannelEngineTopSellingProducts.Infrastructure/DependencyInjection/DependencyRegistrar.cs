@@ -13,6 +13,8 @@ namespace ChannelEngineTopSellingProducts.Infrastructure.DependencyInjection
 		{
 			serviceCollection.AddSingleton<IInMemoryDatabase, InMemoryDatabase>();
 			serviceCollection.AddSingleton<IProductsRepository, ProductsInMemoryRepository>();
+			serviceCollection.AddSingleton<ITopSellingProductsAlgorithm, TopSellingProductPriorityQueueBasedAlgorithm>();
+
 			AddChannelEngineRestApiClient(serviceCollection, configuration);
 			return serviceCollection;
 		}
