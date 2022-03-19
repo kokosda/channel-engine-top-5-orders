@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ChannelEngineTop5Orders.Application.Products;
+namespace ChannelEngineTopSellingProducts.Application.Products;
 
 public sealed class TopSellingProductsDto
 {

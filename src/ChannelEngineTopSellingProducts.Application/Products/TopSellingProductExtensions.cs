@@ -1,7 +1,7 @@
 ﻿using System;
-using ChannelEngineTop5Orders.Domain.Products;
+using ChannelEngineTopSellingProducts.Domain.Products;
 
-namespace ChannelEngineTop5Orders.Application.Products;
+namespace ChannelEngineTopSellingProducts.Application.Products;
 
 public static class TopSellingProductExtensions
 {

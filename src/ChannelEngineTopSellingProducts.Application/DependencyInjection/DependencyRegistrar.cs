@@ -1,8 +1,8 @@
-﻿using ChannelEngineTop5Orders.Application.Products;
-using ChannelEngineTop5Orders.Core.Handlers;
+﻿using ChannelEngineTopSellingProducts.Core.Handlers;
+using ChannelEngineTopSellingProducts.Application.Products;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ChannelEngineTop5Orders.Application.DependencyInjection
+namespace ChannelEngineTopSellingProducts.Application.DependencyInjection
 {
 	public static class DependencyRegistrar
 	{

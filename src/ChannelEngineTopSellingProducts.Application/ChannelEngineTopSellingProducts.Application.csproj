@@ -10,8 +10,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\ChannelEngineTop5Orders.Core\ChannelEngineTop5Orders.Core.csproj" />
-        <ProjectReference Include="..\ChannelEngineTop5Orders.Domain\ChannelEngineTop5Orders.Domain.csproj" />
+        <ProjectReference Include="..\ChannelEngineTopSellingProducts.Core\ChannelEngineTopSellingProducts.Core.csproj" />
+        <ProjectReference Include="..\ChannelEngineTopSellingProducts.Domain\ChannelEngineTopSellingProducts.Domain.csproj" />
     </ItemGroup>
 
 </Project>

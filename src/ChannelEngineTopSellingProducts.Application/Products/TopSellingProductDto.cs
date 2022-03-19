@@ -1,4 +1,4 @@
-﻿namespace ChannelEngineTop5Orders.Application.Products;
+﻿namespace ChannelEngineTopSellingProducts.Application.Products;
 
 public sealed class TopSellingProductDto
 {

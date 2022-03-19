@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using ChannelEngineTop5Orders.Core.Handlers;
-using ChannelEngineTop5Orders.Core.Interfaces;
-using ChannelEngineTop5Orders.Core.ResponseContainers;
-using ChannelEngineTop5Orders.Domain.Products;
+using ChannelEngineTopSellingProducts.Core.Handlers;
+using ChannelEngineTopSellingProducts.Core.Interfaces;
+using ChannelEngineTopSellingProducts.Core.ResponseContainers;
+using ChannelEngineTopSellingProducts.Domain.Products;
 
-namespace ChannelEngineTop5Orders.Application.Products;
+namespace ChannelEngineTopSellingProducts.Application.Products;
 
 public class TopSellingProductQueryHandler : IGenericQueryHandler<TopSellingProductsQuery, TopSellingProductsDto>
 {

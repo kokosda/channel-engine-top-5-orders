@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using ChannelEngineTop5Orders.Core.Handlers;
-using ChannelEngineTop5Orders.Core.Interfaces;
+using ChannelEngineTopSellingProducts.Core.Handlers;
+using ChannelEngineTopSellingProducts.Core.Interfaces;
 
-namespace ChannelEngineTop5Orders.Application.Handlers
+namespace ChannelEngineTopSellingProducts.Application.Handlers
 {
 	public abstract class QueryHandlerBase<T> : IQueryHandler<T>
 	{
