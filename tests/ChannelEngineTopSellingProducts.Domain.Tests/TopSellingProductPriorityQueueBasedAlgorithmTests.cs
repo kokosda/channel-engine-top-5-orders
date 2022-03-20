@@ -54,6 +54,27 @@ public sealed class TopSellingProductPriorityQueueBasedAlgorithmTests
 		Assert.AreEqual(4, result?.ElementAt(4).TotalQuantity);
 	}
 
+	[TestCase(5, 3, new [] { 7, 6, 3 })]
+	[TestCase(5, 0, new int[0])]
+	[TestCase(5, 1, new [] { 3 })]
+	public void GetTopSellingProducts_WhenTopCountGreaterThanProductsCount_ReturnsTopCount(int maxTopCount, int expectedTopCount, int[] expectedQuantities)
+	{
+		// Arrange
+		var products = GetProductsByTestName(TestContext.CurrentContext.Test.Name);
+
+		// Act
+		var result = _algorithm?.GetTopSellingProducts(products, maxTopCount);
+
+		// Assert
+		Assert.IsNotNull(result);
+		Assert.AreEqual(expectedTopCount, result?.Count);
+
+		for (var i = 0; i < expectedTopCount; i++)
+		{
+			Assert.AreEqual(expectedQuantities[i], result?.ElementAt(i).TotalQuantity);
+		}
+	}
+
 	private Product[] GetProductsByTestName(string testName)
 	{
 		var content = File.ReadAllText($"Resources/{nameof(TopSellingProductPriorityQueueBasedAlgorithmTests)}/{testName}.json");

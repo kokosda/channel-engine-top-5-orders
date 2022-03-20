@@ -23,6 +23,15 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Content Include="Resources\TopSellingProductPriorityQueueBasedAlgorithmTests\GetTopSellingProducts_WhenTopCountGreaterThanProductsCount_ReturnsTopCount(5,0,[]).json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="Resources\TopSellingProductPriorityQueueBasedAlgorithmTests\GetTopSellingProducts_WhenTopCountGreaterThanProductsCount_ReturnsTopCount(5,1,[3]).json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="Resources\TopSellingProductPriorityQueueBasedAlgorithmTests\GetTopSellingProducts_WhenTopCountGreaterThanProductsCount_ReturnsTopCount(5,3,[7, 6, 3]).json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
       <None Remove="Resources\TopSellingProductPriorityQueueBasedAlgorithmTests\GetTopSellingProducts_WhenOnlyUniqueProductsAppearInTheList_ReturnsExpectedTopCount(4).json" />
       <Content Include="Resources\TopSellingProductPriorityQueueBasedAlgorithmTests\GetTopSellingProducts_WhenOnlyUniqueProductsAppearInTheList_ReturnsExpectedTopCount(4).json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
