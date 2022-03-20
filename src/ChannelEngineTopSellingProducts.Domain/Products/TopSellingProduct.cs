@@ -6,5 +6,5 @@ public sealed class TopSellingProduct
 	public string Name { get; init; } = string.Empty;
 	public string MerchantProductNo { get; init; } = string.Empty;
 	public string Gtin { get; init; } = string.Empty;
-	public int TotalQuantity { get; init; }
+	public long TotalQuantity { get; init; }
 }

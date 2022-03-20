@@ -7,7 +7,7 @@ public sealed class TopSellingProductPriorityQueueBasedAlgorithm : ITopSellingPr
 {
 	public IReadOnlyCollection<TopSellingProduct> GetTopSellingProducts(IReadOnlyCollection<Product> products, int topCount)
 	{
-		var priorityQueue = new PriorityQueue<TopSellingProduct, int>();
+		var priorityQueue = new PriorityQueue<TopSellingProduct, long>();
 		var topSellingProductCandidates = products.GroupBy(p => p.Id, p => p)
 			.Select(GroupToTopSellingProduct)
 			.ToImmutableList();
