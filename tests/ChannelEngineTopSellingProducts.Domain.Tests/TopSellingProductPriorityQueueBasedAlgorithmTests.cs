@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using ChannelEngineTopSellingProducts.Domain.Products;
@@ -73,6 +76,39 @@ public sealed class TopSellingProductPriorityQueueBasedAlgorithmTests
 		{
 			Assert.AreEqual(expectedQuantities[i], result?.ElementAt(i).TotalQuantity);
 		}
+	}
+
+	[TestCase(10_000_000, 5, 60D)]
+	[TestCase(1_000_000, 5, 6D)]
+	[TestCase(100_000, 5, 1D)]
+	public void GetTopSellingProducts_WhenProductCountIsMillionsInCount_PerformanceIsExpected(int elementsCount, int expectedTopCount, double expectedMaxExecutionTimeInSeconds)
+	{
+		// Arrange
+		var productsList = new List<Product>();
+
+		for (int i = 0; i < elementsCount; i++)
+		{
+			var randomString = Random.Shared.Next(1, 10_000_000).ToString();
+			var product = new Product
+			{
+				Id = randomString,
+				Gtin = randomString,
+				Name = randomString,
+				Quantity = Random.Shared.Next(1, 1000),
+				MerchantProductNo = randomString
+			};
+			productsList.Add(product);
+		}
+
+		// Act
+		var sw = Stopwatch.StartNew();
+		var result = _algorithm?.GetTopSellingProducts(productsList, expectedTopCount);
+		sw.Stop();
+
+		// Assert
+		Assert.IsNotNull(result);
+		Assert.AreEqual(expectedTopCount, result?.Count);
+		Assert.That(expectedMaxExecutionTimeInSeconds, Is.GreaterThanOrEqualTo(sw.Elapsed.TotalSeconds));
 	}
 
 	private Product[] GetProductsByTestName(string testName)
