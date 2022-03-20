@@ -1,0 +1,65 @@
+﻿[
+  {
+	"Id": "92411",
+	"Name": "Choco Pie",
+	"MerchantProductNo": "capello-301",
+	"Gtin": "8848124000012",
+	"Quantity": 3
+  },
+  {
+	"Id": "92412",
+	"Name": "Oreo",
+	"MerchantProductNo": "jakomo-4",
+	"Gtin": "8848124000491",
+	"Quantity": 2
+  },
+  {
+	"Id": "92413",
+	"Name": "Caramel",
+	"MerchantProductNo": "apollo-4",
+	"Gtin": "1048124000491",
+	"Quantity": 4
+  },
+  {
+	"Id": "923001",
+	"Name": "Huston01",
+	"MerchantProductNo": "sherlok-01",
+	"Gtin": "1000003000321",
+	"Quantity": 2
+  },
+  {
+	"Id": "923002",
+	"Name": "Huston02",
+	"MerchantProductNo": "sherlok-02",
+	"Gtin": "1000003000322",
+	"Quantity": 5
+  },
+  {
+	"Id": "923003",
+	"Name": "Huston03",
+	"MerchantProductNo": "sherlok-03",
+	"Gtin": "1000003000323",
+	"Quantity": 6
+  },
+  {
+	"Id": "923004",
+	"Name": "Huston04",
+	"MerchantProductNo": "sherlok-04",
+	"Gtin": "1000003000324",
+	"Quantity": 7
+  },
+  {
+	"Id": "923005",
+	"Name": "Huston05",
+	"MerchantProductNo": "sherlok-05",
+	"Gtin": "1000003000325",
+	"Quantity": 8
+  },
+  {
+	"Id": "923006",
+	"Name": "Huston06",
+	"MerchantProductNo": "sherlok-06",
+	"Gtin": "1000003000326",
+	"Quantity": 2
+  }
+]
