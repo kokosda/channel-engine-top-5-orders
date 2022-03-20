@@ -9,7 +9,7 @@ namespace ChannelEngineTopSellingProducts.Domain.Tests;
 [TestFixture]
 public sealed class TopSellingProductPriorityQueueBasedAlgorithmTests
 {
-	private TopSellingProductPriorityQueueBasedAlgorithm _algorithm;
+	private TopSellingProductPriorityQueueBasedAlgorithm? _algorithm;
 
 	[SetUp]
 	public void SetUp()
@@ -24,15 +24,34 @@ public sealed class TopSellingProductPriorityQueueBasedAlgorithmTests
 		var products = GetProductsByTestName(TestContext.CurrentContext.Test.Name);
 
 		// Act
-		var result = _algorithm.GetTopSellingProducts(products, expectedTopCount);
+		var result = _algorithm?.GetTopSellingProducts(products, expectedTopCount);
 
 		// Assert
 		Assert.IsNotNull(result);
-		Assert.AreEqual(expectedTopCount, result.Count);
-		Assert.AreEqual(8, result.ElementAt(0).TotalQuantity);
-		Assert.AreEqual(7, result.ElementAt(1).TotalQuantity);
-		Assert.AreEqual(6, result.ElementAt(2).TotalQuantity);
-		Assert.AreEqual(5, result.ElementAt(3).TotalQuantity);
+		Assert.AreEqual(expectedTopCount, result?.Count);
+		Assert.AreEqual(8, result?.ElementAt(0).TotalQuantity);
+		Assert.AreEqual(7, result?.ElementAt(1).TotalQuantity);
+		Assert.AreEqual(6, result?.ElementAt(2).TotalQuantity);
+		Assert.AreEqual(5, result?.ElementAt(3).TotalQuantity);
+	}
+
+	[TestCase(5)]
+	public void GetTopSellingProducts_WhenDuplicatedProductsAppearInTheList_ReturnsExpectedTopCount(int expectedTopCount)
+	{
+		// Arrange
+		var products = GetProductsByTestName(TestContext.CurrentContext.Test.Name);
+
+		// Act
+		var result = _algorithm?.GetTopSellingProducts(products, expectedTopCount);
+
+		// Assert
+		Assert.IsNotNull(result);
+		Assert.AreEqual(expectedTopCount, result?.Count);
+		Assert.AreEqual(8, result?.ElementAt(0).TotalQuantity);
+		Assert.AreEqual(8, result?.ElementAt(1).TotalQuantity);
+		Assert.AreEqual(7, result?.ElementAt(2).TotalQuantity);
+		Assert.AreEqual(6, result?.ElementAt(3).TotalQuantity);
+		Assert.AreEqual(4, result?.ElementAt(4).TotalQuantity);
 	}
 
 	private Product[] GetProductsByTestName(string testName)

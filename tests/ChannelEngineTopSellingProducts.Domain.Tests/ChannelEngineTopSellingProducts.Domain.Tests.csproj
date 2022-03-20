@@ -27,6 +27,10 @@
       <Content Include="Resources\TopSellingProductPriorityQueueBasedAlgorithmTests\GetTopSellingProducts_WhenOnlyUniqueProductsAppearInTheList_ReturnsExpectedTopCount(4).json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
+      <None Remove="Resources\TopSellingProductPriorityQueueBasedAlgorithmTests\GetTopSellingProducts_WhenDuplicatedProductsAppearInTheList_ReturnsExpectedTopCount(5).json" />
+      <Content Include="Resources\TopSellingProductPriorityQueueBasedAlgorithmTests\GetTopSellingProducts_WhenDuplicatedProductsAppearInTheList_ReturnsExpectedTopCount(5).json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>
