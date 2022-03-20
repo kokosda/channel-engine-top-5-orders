@@ -54,4 +54,4 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/
 - MS Visual Studio 2022 / Rider (latest)
 
 ## Remarks
-- Methods do not do null checking as C# nullable reference types feature is enabled.
+- Methods do not do null-checking of their parameters as C# nullable reference types feature is enabled and the code does not produce nullable-related warnings on compilation.
