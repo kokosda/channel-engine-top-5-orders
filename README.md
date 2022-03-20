@@ -5,27 +5,27 @@ Create a .NET application with two entry points, a console app and an ASP.NET we
 ## Required functionality
 Include at least the functionality listed below
 
-##Application Entry points
+## Application Entry points
 - A .NET console application which can execute the business logic listed below. Write the results of the logic below to the console output.
 - An ASP.NET application, which can execute the business logic listed below. Implement this using a controller which displays an HTML table with the results.
 
-###Business logic
+### Business logic
 _Create the following methods in a shared library_
 
 - Fetch all orders with status IN_PROGRESS from the API
 - From these orders, compile a list of the top 5 products sold (product name, GTIN and total quantity), order these by the total quantity sold in descending order
 - Pick one of the products from these orders and use the API to set the stock of this product to 25.
 
-###Testing
+### Testing
 - A unit test testing the expected outcome of the “top 5” functionality based on dummy input.
 
-###Tips
+### Tips
 - Try to incorporate dependency injection.
 - Using async is allowed.
 - Commit individual changes to version control, like you would do for a
 professional project.
 
-###Notes
+### Notes
 - You are not allowed to use the ready made ChannelEngine API NuGet package.
 - Any other libraries or NuGet packages are allowed.
 - The business logic, ASP.NET entry point, console application entry point and
@@ -45,3 +45,13 @@ https://api-dev.channelengine.net/api/v2/orders/new?apikey=541b989ef78ccb1bad630
 
 The process of creating a basic ASP.NET webapp can be found at:
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/
+
+## Technologies used
+- NET 6
+- C# 10
+
+## How to build
+- MS Visual Studio 2022 / Rider (latest)
+
+## Remarks
+- Methods do not do null checking as C# nullable reference types feature is enabled.
